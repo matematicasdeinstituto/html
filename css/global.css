@@ -1,0 +1,33 @@
+html, body{
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+body {
+    color	    : darkgrey;
+    background-color: black;
+}
+
+/* links */
+a:link  {
+    color	    : lightblue;
+    background-color: transparent;
+}
+
+a:visited{
+    color	    : darkcyan;
+    background-color: transparent;
+}
+
+a:hover{
+    color	    : red;
+    background-color: transparent;
+    text-decoration : underline;
+}
+
+a:active{
+    color	    : yellow;
+    background-color: transparent;
+    text-decoration : underline;
+}

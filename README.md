@@ -1,2 +1,1 @@
 # matematicasdeinstituto.github.io
-pru
