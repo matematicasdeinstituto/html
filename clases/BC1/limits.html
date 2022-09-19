@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 20px;
+    }
+    
+    #table {
+      margin-left: -850px;
+    }
+</style>
+</head>
+<body>
+
+<script>{
+    let n = 0;
+    let id_interval;
+    function limit_e(){
+	let res = Math.pow(1 + 1/n, n);
+	document.getElementById("id_n").innerHTML = n;
+	document.getElementById("number_e").innerHTML = res;
+	n += 1000;
+    }
+
+    function start_limit_e(){
+	id_interval = setInterval(limit_e, 1);
+	document.getElementById("bt_start_limit_e").disabled = true;
+	document.getElementById("bt_stop_limit_e").disabled = false;
+    }
+
+    function stop_limit_e(){
+	clearInterval(id_interval);
+	document.getElementById("bt_start_limit_e").disabled = false;
+	document.getElementById("bt_stop_limit_e").disabled = true;
+    }
+}</script>
+
+<h2>Cálculo del límite (1 + 1/n)^n</h2>
+<p>(o donde se muestra un ejemplo de un cálculo realizado a mano que el ordenador
+, con un programa normal, no es capaz de realizar)</p>
+<table style="width:500px">
+    <tr>
+	<td style="width: 30%">n</td>
+	<td>límite</td>
+    </tr>
+
+    <tr>
+	<td id="id_n"></td>
+	<td id="number_e" test-align="left"></td>
+    </tr>
+</table>
+
+<p id="number_e"> </p>
+<button id="bt_start_limit_e" onclick="start_limit_e()">Start</button>
+<button id="bt_stop_limit_e" onclick="stop_limit_e()" disabled=false>Stop</button>
+
+
+</body>
+</html>
